@@ -1,0 +1,49 @@
+.Main-layout{
+  display: grid;/* creates a grid layout */
+  grid-template-columns: 1fr 1fr 1fr 1fr;/* create a grid with 4 columns of equal available size*/
+  max-width: 1000px;
+  margin: 0 auto; 
+  grid-gap: 10px; /*Gap between the rows and columns*/
+  }
+   
+  
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

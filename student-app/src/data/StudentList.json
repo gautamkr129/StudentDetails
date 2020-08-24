@@ -1,0 +1,202 @@
+[
+    {
+      "id": 1,
+      "name": "Alex",
+      "rollNo": "123",
+      "class": "1",
+      "gender": "Male",
+      "status": "Present"
+    },
+    {
+      "id": 2,
+      "name": "Aparna",
+      "rollNo": "234",
+      "class": "1",
+      "gender": "Female",
+      "status": "Present"
+    },
+    {
+      "id": 3,
+      "name": "Bane",
+      "rollNo": "345",
+      "class": "1",
+      "gender": "Male",
+      "status": "Present"
+    },
+    {
+      "id": 4,
+      "name": "Carol",
+      "rollNo": "456",
+      "class": "1",
+      "gender": "Female",
+      "status": "Absent"
+    },
+    {
+      "id": 5,
+      "name": "Anmod",
+      "rollNo": "567",
+      "class": "1",
+      "gender": "Male",
+      "status": "Absent"
+    },
+    {
+      "id": 6,
+      "name": "Aparna",
+      "rollNo": "678",
+      "class": "2",
+      "gender": "Female",
+      "status": "Present"
+    },
+    {
+      "id": 7,
+      "name": "Ganesh",
+      "rollNo": "789",
+      "class": "2",
+      "gender": "Male",
+      "status": "Present"
+    },
+    {
+      "id": 8,
+      "name": "Carol",
+      "rollNo": "890",
+      "class": "2",
+      "gender": "Female",
+      "status": "Present"
+    },
+    {
+      "id": 9,
+      "name": "Cody",
+      "rollNo": "901",
+      "class": "2",
+      "gender": "",
+      "status": "Absent"
+    },
+    {
+      "id": 10,
+      "name": "Satish",
+      "rollNo": "987",
+      "class": "2",
+      "gender": "Male",
+      "status": "Absent"
+    },
+    {
+      "id": 11,
+      "name": "Jagan",
+      "rollNo": "876",
+      "class": "3",
+      "gender": "Male",
+      "status": "Present"
+    },
+    {
+      "id": 12,
+      "name": "Ram",
+      "rollNo": "765",
+      "class": "3",
+      "gender": "Male",
+      "status": "Present"
+    },
+    {
+      "id": 13,
+      "name": "Sulekha",
+      "rollNo": "654",
+      "class": "3",
+      "gender": "Female",
+      "status": "Present"
+    },
+    {
+      "id": 14,
+      "name": "Clara",
+      "rollNo": "543",
+      "class": "3",
+      "gender": "Female",
+      "status": "Absent"
+    },
+    {
+      "id": 15,
+      "name": "Sindhu",
+      "rollNo": "432",
+      "class": "3",
+      "gender": "Female",
+      "status": "Absent"
+    },
+    {
+      "id": 16,
+      "name": "Rishi",
+      "rollNo": "321",
+      "class": "4",
+      "gender": "Male",
+      "status": "Present"
+    },
+    {
+      "id": 17,
+      "name": "Diego",
+      "rollNo": "210",
+      "class": "4",
+      "gender": "Male",
+      "status": "Present"
+    },
+    {
+      "id": 18,
+      "name": "Cinto",
+      "rollNo": "109",
+      "class": "4",
+      "gender": "Male",
+      "status": "Present"
+    },
+    {
+      "id": 19,
+      "name": "Alex",
+      "rollNo": "298",
+      "class": "4",
+      "gender": "Male",
+      "status": "Absent"
+    },
+    {
+      "id": 20,
+      "name": "Junaid",
+      "rollNo": "387",
+      "class": "4",
+      "gender": "Male",
+      "status": "Absent"
+    },
+    {
+      "id": 21,
+      "name": "Kunal",
+      "rollNo": "476",
+      "class": "5",
+      "gender": "Male",
+      "status": "Present"
+    },
+    {
+      "id": 22,
+      "name": "Lalit",
+      "rollNo": "565",
+      "class": "5",
+      "gender": "Male",
+      "status": "Present"
+    },
+    {
+      "id": 23,
+      "name": "Tara",
+      "rollNo": "100",
+      "class": "5",
+      "gender": "Female",
+      "status": "Present"
+    },
+    {
+      "id": 24,
+      "name": "Aadi",
+      "rollNo": "200",
+      "class": "5",
+      "gender": "Male",
+      "status": "Absent"
+    },
+    {
+      "id": 25,
+      "name": "Rohini",
+      "rollNo": "300",
+      "class": "5",
+      "gender": "Female",
+      "status": "Absent"
+    }
+  ]
