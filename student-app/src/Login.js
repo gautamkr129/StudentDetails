@@ -1,32 +1,53 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 class Login extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = { name: '', password: ''}
-        this.nameRef = React.createRef()
-        this.pwdRef = React.createRef()
+  constructor(props){
+    super(props)
+    let loggedIn=false;
+    this.state={
+      username:'',
+      password:'',
+      loggedIn
     }
-    handleLogin = (e) => {
-        e.preventDefault();
-        if(this.nameRef.current.value==="" && this.pwdRef.current.value==="") {
-            alert("Please enter username and password")
+    this.onChange=this.onChange.bind(this)
+    this.submitForm=this.submitForm.bind(this)
+  }
+
+  onChange(e){
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+
+  }
+  submitForm(e){
+    e.preventDefault()
+    const {username, password} = this.state;
+    if(username==="student" && password=== "student@123"){
+       this.setState({
+         loggedIn:true
+       })
+    }
+  }
+
+    
+      render() {
+        if(this.state.loggedIn){
+          return <Redirect to="/studentcards"/>
         }
-        alert("Welcome " + this.nameRef.current.value);
-    }
-    render() {
+    
+           
         return(<React.Fragment>
             <form>
                 <div className="form-group">
                     <label>Username:</label>
-                    <input style={{width:'40%'}} type="text" className="form-control" id="name" placeholder="Enter Name" name="name" ref={this.nameRef}/>
+                    <input style={{width:'40%'}} type="text" className="form-control" name="username" placeholder="Enter Name" value={this.state.username} onChange={this.onChange}/>
                 </div>
                 <div className="form-group">
                     <label>Password:</label>
-                    <input style={{width:'40%'}} type="password" className="form-control" id="password" placeholder="Enter password" name="password" ref={this.pwdRef} />
+                    <input style={{width:'40%'}} type="password" className="form-control" placeholder="Enter Password" name="password" value={this.state.password} onChange={this.onChange}/>
                 </div>
-               <button type="submit" className="btn btn-primary" onClick={this.handleLogin}>Login</button>
+               <button type="submit" className="btn btn-primary" onClick={this.submitForm}>Login</button>
            </form>
         </React.Fragment>)
     }
