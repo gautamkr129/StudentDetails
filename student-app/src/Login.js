@@ -1,39 +1,33 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 class Login extends React.Component {
   constructor(props){
     super(props)
-    let loggedIn=false;
     this.state={
       username:'',
       password:'',
-      loggedIn
     }
-    this.onChange=this.onChange.bind(this)
-    this.submitForm=this.submitForm.bind(this)
   }
 
-  onChange(e){
+  nameChangeHandler=(event) =>{
     this.setState({
-      [e.target.name]: e.target.value
-    })
+      username: event.target.value
+    });
+  }
 
+  passwordChangedHandler=(event) => {
+    this.setState({
+      password: event.target.value
+    });
   }
-  submitForm(e){
-    e.preventDefault()
-    const {username, password} = this.state;
-    if(username==="student" && password=== "student@123"){
-       this.setState({
-         loggedIn:true
-       })
-    }
-  }
+
 
     
       render() {
-        if(this.state.loggedIn){
-          return <Redirect to="/studentcards"/>
+        if(this.props.status==="loggedIn"){
+          return<Redirect to="/studentcards"/>
         }
     
            
@@ -41,15 +35,26 @@ class Login extends React.Component {
             <form>
                 <div className="form-group">
                     <label>Username:</label>
-                    <input style={{width:'40%'}} type="text" className="form-control" name="username" placeholder="Enter Name" value={this.state.username} onChange={this.onChange}/>
+                    <input style={{width:'40%'}} type="text" className="form-control" name="username" placeholder="Enter Name" value={this.state.username} onChange={this.nameChangeHandler}/>
                 </div>
                 <div className="form-group">
                     <label>Password:</label>
-                    <input style={{width:'40%'}} type="password" className="form-control" placeholder="Enter Password" name="password" value={this.state.password} onChange={this.onChange}/>
+                    <input style={{width:'40%'}} type="password" className="form-control" placeholder="Enter Password" name="password" value={this.state.password} onChange={this.passwordChangedHandler}/>
                 </div>
-               <button type="submit" className="btn btn-primary" onClick={this.submitForm}>Login</button>
+               <button type="submit" className="btn btn-primary" onClick={() =>this.props.login(this.state.username, this.state.password)}>Login</button>
            </form>
         </React.Fragment>)
     }
 }
-export default Login;
+
+const mapStateToProps = (state) => {
+  return {
+    status: state.status,
+  };
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    login: (username,password) => dispatch({type:'LOGIN_REQUEST', username:username, password:password}),
+  };
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
